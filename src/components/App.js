@@ -29,7 +29,7 @@ const items = [
         title: "foo2"
     },
     {
-        title: "foo3"
+        title: "cool"
     }
 ];
 

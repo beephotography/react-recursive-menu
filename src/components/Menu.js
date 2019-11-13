@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { MenuItem } from "./MenuItem";
 
 export const Menu = props => {
     const items = props.items;
@@ -7,13 +8,7 @@ export const Menu = props => {
     return <ul>
         {items.map(
             (item, idx) =>
-                <li key={idx}>
-                    {item.title}
-                    {
-                        item.children !== undefined && item.children.length > 0 &&
-                        <Menu items={item.children} />
-                    }
-                </li>
+                <MenuItem key={idx} item={item} />
         )}
     </ul>;
 };
